@@ -16,5 +16,13 @@
     <script defer src="main.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    
+    <div id="root" class="container">
+      <div v-if="isLoading" class="container">loading...</div>
+      <ul v-else>
+        <li v-for="email in emails">{{email}}</li>
+      </ul>
+    </div>
+  </body>
 </html>
