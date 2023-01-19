@@ -19,10 +19,11 @@
   <body>
     
     <div id="root" class="container">
-      <div v-if="isLoading" class="container">loading...</div>
-      <ul v-else>
+      <ul v-if="emails.length === 10">
         <li v-for="email in emails">{{email}}</li>
       </ul>
+      <div v-else class="container">loading...</div>
+
     </div>
   </body>
 </html>
