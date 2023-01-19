@@ -16,7 +16,7 @@ const app = Vue.createApp({
     data(){
         return{
             emails: [],
-            isLoading: false
+            
         }
     },
     methods:{
@@ -26,9 +26,7 @@ const app = Vue.createApp({
         .then(response =>{
         this.emails.push(response.data.response) ;
         })
-        .then(()=>{
-            this.isLoading = false;
-        })
+        
     
         }
     },
